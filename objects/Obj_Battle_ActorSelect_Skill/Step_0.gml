@@ -20,12 +20,13 @@ if(commandActive>0){
 
 if(keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord("D"))){
 	instance_create_depth(0,0,0,Obj_Battle_ActorSkillList);
-	audio_play_sound(Sound_Cursor,0,0);
+	SoundOk();
 	commandMarkerLength=0;
 	instance_destroy(self);
 }
 
 if(keyboard_check_pressed(vk_backspace) || keyboard_check_pressed(ord("A"))){
+	SoundCancel();
 	instance_create_depth(0,0,0,Obj_Battle_Commands);
 	instance_destroy(self);
 }

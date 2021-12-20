@@ -16,9 +16,9 @@ if(shake_limit>0){
 	act3.x += shake;
 }else{
 	act_all.image_blend = c_white;
-	act1.sprite_index = act1._sprite;
-	act2.sprite_index = act2._sprite;
-	act3.sprite_index = act3._sprite;
+	act1.sprite_index = act1_sprite;
+	act2.sprite_index = act2_sprite;
+	act3.sprite_index = act3_sprite;
 	act1.x = act1_pos;
 	act2.x = act2_pos;
 	act3.x = act3_pos;

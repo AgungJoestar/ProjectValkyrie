@@ -5,6 +5,7 @@ xx = [256, 192, 192];
 yy = [224, 160, 256];
 
 actor_id = global.partyMember[bActor];
+party_id = bActor;
 sprite_index = global.actor_Spr[actor_id];
 x = xx[bActor];
 y = yy[bActor];
@@ -22,3 +23,4 @@ _def = global.actor_DEF[actor_id];
 _skill[0] = global.actor_Skill[actor_id][0];
 _skill[1] = global.actor_Skill[actor_id][1];
 _skill[2] = global.actor_Skill[actor_id][2];
+_stunned = false;

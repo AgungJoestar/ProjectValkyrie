@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 if(en_move<=en_move_limit && mg_done==false){
-	en_move+=1
-	en_obj.x -= 1;
+	en_move+=4
+	en_obj.x -= 4;
 }else{
 	playminigame = true;
 }

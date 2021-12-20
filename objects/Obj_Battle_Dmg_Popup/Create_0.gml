@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+SoundDmg();
 en = Obj_Battle_Enemy;
 en_pos = en.x;
 damage = global.damage;

@@ -21,13 +21,13 @@ if(commandActive>0){
 if(keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord("D"))){
 	if(commandActive==0){
 		instance_create_depth(0,0,0,Obj_Battle_AttackPhaseNotif);
-		audio_play_sound(Sound_Cursor,0,0);
+		SoundOk();
 		commandMarkerLength=0;
 		instance_destroy(self);
 	}
 	if(commandActive==1){
 		instance_create_depth(0,0,0,Obj_Battle_ActorSelect_Skill);
-		audio_play_sound(Sound_Cursor,0,0);
+		SoundOk();
 		commandMarkerLength=0;
 		instance_destroy(self);
 	}

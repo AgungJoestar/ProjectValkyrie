@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+SoundNotif();
 text_font = Font_Battle_Notif;
 draw_set_font(text_font);
 text = "Attack Phase";

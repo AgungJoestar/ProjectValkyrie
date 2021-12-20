@@ -21,6 +21,7 @@ function ActorList(){
 	global.actor_name[actor_id] = "Thorns";
 	global.actor_HP[actor_id] = 1430;
 	global.actor_SP[actor_id] = 1;
+	//global.actor_SP[actor_id] = 1;
 	global.actor_ATK[actor_id] = 30;
 	global.actor_DEF[actor_id] = 17;
 	global.actor_maxAP[actor_id] = 1;

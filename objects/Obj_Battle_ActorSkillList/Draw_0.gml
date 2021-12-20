@@ -56,3 +56,6 @@ for(var i = 0; i<array_length(command);i++){
 }
 
 draw_set_font(setFontNormal);
+
+var desc = global.skill_desc[actor._skill[commandActive]];
+draw_text(text_help_x,text_help_y,desc);

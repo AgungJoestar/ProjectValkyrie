@@ -3,8 +3,8 @@
 function HpHeal(amount){
 	global.hpheal = amount;
 	Obj_Battle_Actor_HP.hp += amount;
-	if(Obj_Battle_Actor_HP.sp>100){
-		Obj_Battle_Actor_HP.sp=100;
+	if(Obj_Battle_Actor_HP.hp>Obj_Battle_Actor_HP.total_hp){
+		Obj_Battle_Actor_HP.hp=Obj_Battle_Actor_HP.total_hp;
 	}
 	instance_create_depth(0,0,0,Obj_Battle_Hpheal_Popup);
 }

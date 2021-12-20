@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
   "compression": 0,
-  "volume": 1.0,
+  "volume": 0.8,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -14,8 +14,8 @@
   "soundFile": "Battle_Theme.mp3",
   "duration": 336.364258,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "BGM",
+    "path": "folders/Sounds/BGM.yy",
   },
   "resourceVersion": "1.0",
   "name": "Battle_Theme",

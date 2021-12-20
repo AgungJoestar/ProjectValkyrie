@@ -41,3 +41,6 @@ for (var i=0;i<array_length(command);i++){
 
 //show_message(command_w[0]);
 draw_set_font(setFontNormal);
+
+text_help_x = room_width/2-120;
+text_help_y = room_height/2+150;

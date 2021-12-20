@@ -6,3 +6,4 @@ hpheal = global.hpheal;
 popup_x = act.x;
 popup_y = act.y;
 alpha = 1;
+SoundHeal();

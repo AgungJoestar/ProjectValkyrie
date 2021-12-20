@@ -9,8 +9,10 @@ function VarInitialization(){
 	global.partyMember[0]=1;
 	global.partyMember[1]=2;
 	global.partyMember[2]=3;
-	
 	global.soundCursor = Sound_Cursor;
+	global.soundCancel = Sound_Cancel;
+	global.soundOk = Sound_Ok;
+	
 	global.BattleCommand = 0;
 	global.BattleTurns = 1;
 	global.AttackerId = 0;
@@ -18,4 +20,7 @@ function VarInitialization(){
 	global.spheal = 0;
 	global.apheal = 0;
 	global.BattleMinigameWin = false;
+	global.skillSelected = 0;
+	global.skillUser = 0;
+	global.skillDone = false;
 }

@@ -22,10 +22,11 @@ if(qte>0 && done=false && wait>=30){
 
 if(qte>0 && keyboard_check_pressed(ord(button[button_index,0])) || qte<=0 && done=false){
 	if(qte>=perfect_l && qte<=perfect_r){
-		audio_play_sound(Sound_Cursor,0,0);
+		SoundChime();
 		outcome="SUCCESS!!! Damage Halved!"
 		global.BattleMinigameWin=true;
 	}else{
+		SoundBuzzer();
 		outcome="Fail..."
 		global.BattleMinigameWin=false;
 	}

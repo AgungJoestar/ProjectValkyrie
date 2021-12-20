@@ -16,12 +16,30 @@ if(wait<=0 && progress==1){
 }
 
 if(wait<=0 && progress==2){
+	var rand = irandom(2);
+	var act_v = global.partyMember[rand];
+	VoiceStart(act_v);
 	view_visible[3]=false;
 	view_visible[0]=true;
 	instance_activate_object(Obj_Battle_Actor_AP);
 	instance_activate_object(Obj_Battle_Commands);
 	instance_activate_object(Obj_Battle_Actor_HP);
 	instance_activate_object(Obj_Battle_Turns);
+	instance_create_depth(0,0,0,Obj_Battle_Button_Prompt);
 	camera_destroy(all);
 	instance_destroy(self);
 }
+
+//if(wait<=0 && progress==2){
+//	var rand = irandom(2);
+//	var act_v = global.partyMember[rand];
+//	VoiceStart(act_v);
+//	view_visible[3]=false;
+//	view_visible[0]=true;
+//	instance_activate_object(Obj_Battle_Actor_AP);
+//	instance_activate_object(Obj_Battle_Commands);
+//	instance_activate_object(Obj_Battle_Actor_HP);
+//	instance_activate_object(Obj_Battle_Turns);
+//	camera_destroy(all);
+//	instance_destroy(self);
+//}

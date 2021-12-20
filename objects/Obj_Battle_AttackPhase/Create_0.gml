@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+	rand_chance = 3;
+	var rand = irandom(2);
+	act_v = global.partyMember[rand];
+	VoiceAttack(act_v);
 obj[0] = (global.bActorID[0]);
 obj[1] = (global.bActorID[1]);
 obj[2] = (global.bActorID[2]);
