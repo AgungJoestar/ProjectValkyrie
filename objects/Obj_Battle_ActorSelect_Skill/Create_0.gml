@@ -15,9 +15,10 @@ commandActive = global.BattleCommand;
 commandMarkerLength = 0;
 command_select = "Select User";
 command_select_w = string_width(command_select);
-command[0] = (global.bActorID[0])._name;
-command[1] = (global.bActorID[1])._name;
-command[2] = (global.bActorID[2])._name;
+for(var i=0;i<maxParty();i++){
+	command[i] = (global.bActorID[i])._name;
+}
+
 
 draw_set_font(setFont);
 

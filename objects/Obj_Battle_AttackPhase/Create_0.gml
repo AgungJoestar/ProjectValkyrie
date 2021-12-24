@@ -4,10 +4,18 @@
 	var rand = irandom(2);
 	act_v = global.partyMember[rand];
 	VoiceAttack(act_v);
-obj[0] = (global.bActorID[0]);
-obj[1] = (global.bActorID[1]);
-obj[2] = (global.bActorID[2]);
+max_ap = 0;	
+for(var i=0;i<maxParty();i++){
+	obj[i] = (global.bActorID[i]);
+	max_ap += obj[i]._ap;
+}
 
+key[0] = "D";
+key[1] = "W";
+key[2] = "S";
+spr[0] = Spr_Button_D;
+spr[1] = Spr_Button_W;
+spr[2] = Spr_Button_S;
 //text_help = "Press the corresponding button of the character to attack";
 //text_help_w = string_width(text_help);
 //text_help_h = string_height(text_help);

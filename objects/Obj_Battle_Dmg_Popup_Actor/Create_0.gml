@@ -4,25 +4,24 @@ SoundDmg();
 	var rand_v = irandom(2);
 	var act_v = global.partyMember[rand_v];
 	VoiceDmg(act_v);
-act1 = (global.bActorID[0]);
-act2 = (global.bActorID[1]);
-act3 = (global.bActorID[2]);
-act1_sprite = act1.sprite_index;
-act2_sprite = act2.sprite_index;
-act3_sprite = act3.sprite_index;
+
+for(var i=0;i<maxParty();i++){
+	act[i] = (global.bActorID[i]);
+	act_sprite[i] = act[i].sprite_index;
+	act_pos[i] = act[i].x;
+}
+
 act_all = Obj_Battle_Actor;
 HP = Obj_Battle_Actor_HP;
-act1_pos = act1.x;
-act2_pos = act2.x;
-act3_pos = act3.x;
+
 damage = floor(global.damage);
 //show_message(damage)
 HP.hp -= damage;
 if(HP.hp<0){
 	HP.hp = 0;
 }
-popup_x = act1.x+act1.sprite_width/2;
-popup_y = act1.y+act1.sprite_height/2;
+popup_x = act[0].x+act[0].sprite_width/2;
+popup_y = act[0].y+act[0].sprite_height/2;
 alpha = 1;
 rand = irandom(50);
 

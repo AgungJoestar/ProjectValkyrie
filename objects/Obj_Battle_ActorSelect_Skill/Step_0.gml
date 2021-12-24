@@ -2,7 +2,7 @@
 // You can write your code in this editor
 var commandActive = global.BattleCommand;
 
-if(commandActive<2){
+if(commandActive<maxParty()-1){
 	if (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"))){
 		global.BattleCommand+=1;
 		audio_play_sound(Sound_Cursor,0,0);

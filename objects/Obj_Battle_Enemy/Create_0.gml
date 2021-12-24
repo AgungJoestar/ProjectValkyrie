@@ -1,10 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 //actor_id = global.partyMember[2];
-en_id = 1;
+en_id = 3;
 sprite_index = global.en_sprite[en_id];
-x = 416;
-y = 64;
+//x = 416;
+//y = 64;
+x = global.en_pos_x[en_id];
+y = global.en_pos_y[en_id];
 
 _sprite = sprite_index;
 _spriteATK = global.en_spriteAtk[en_id];

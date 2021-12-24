@@ -26,6 +26,7 @@ if(wait<=0 && progress==2){
 	instance_activate_object(Obj_Battle_Actor_HP);
 	instance_activate_object(Obj_Battle_Turns);
 	instance_create_depth(0,0,0,Obj_Battle_Button_Prompt);
+	instance_create_depth(0,0,1,Obj_Battle_Face);
 	camera_destroy(all);
 	instance_destroy(self);
 }

@@ -7,15 +7,14 @@ function ActorSkills(){
 	global.skill_minigame[skill_id] = Obj_Battle_QTE;
 	
 	skill_id = 1;
-	global.skill_name[skill_id] = "Echoes of Ancestral Wave";
+	global.skill_name[skill_id] = "Guts";
 	global.skill_desc[skill_id] = "Restore HP.\n"+
 								  "Inflict Stun to user.";
-	global.skill_animation[skill_id] = Spr_Anim_Cure;
+	global.skill_animation[skill_id] = Seq_Anim_Cure;
 	global.skill_minigame[skill_id] = 0;
 	global.skill_dmg[skill_id] = 800;
-	global.skill_ap[skill_id] = 2;
-	global.skill_sp[skill_id] = 20;
-	global.skill_SE[skill_id] = Sound_Heal2;
+	global.skill_ap[skill_id] = 1;
+	global.skill_sp[skill_id] = 10;
 	global.skill_formula[skill_id] = function()
 	{
 		var actor = global.skillUser;
@@ -28,18 +27,17 @@ function ActorSkills(){
 	
 	
 	skill_id = 2;
-	global.skill_name[skill_id] = "Protective Spikes";
-	global.skill_desc[skill_id] = "Reduce damage taken.\n"+
-								  "30% counter damage to enemy\n"+
-								  "Inflict Stun to user.";
+	global.skill_name[skill_id] = "Double Accel";
+	global.skill_desc[skill_id] = "Increase user AP refresh by 1";
+	global.skill_animation[skill_id] = Seq_Anim_Cure;
 	global.skill_minigame[skill_id] = 0;
 	global.skill_dmg[skill_id] = 800;
 	global.skill_ap[skill_id] = 1;
-	global.skill_sp[skill_id] = 35;
+	global.skill_sp[skill_id] = 5;
 	global.skill_formula[skill_id] = function ()
 	{
-		damage = 500+global.skill_dmg[skill_id];
-		return damage;
+		global.skillTarget = global.skillUser;
+		instance_create_depth(0,0,5,Obj_State_Double_Refresh);
 	}
 	
 	skill_id = 3;

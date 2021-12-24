@@ -3,22 +3,17 @@
 if(actor.x<=last_x+40)
 	actor.x += 4;
 if(actor.x>=last_x+40){
-	wait-=1;
-	x=actor.x-30;
-	y=actor.y-30;
-	if(playSound==false){
-		audio_play_sound(skill_sound,0,0);
-		playSound=true;
+	if(anim_done==false){
+		seq = layer_sequence_create("Instances",skill_x,skill_y,anim);
+		anim_done = true;
+	}else{
+		if(layer_sequence_is_finished(seq)){
+			wait-=1;
+		}
 	}
-	sprite_index=anim;
 }
 
 if(wait<=0){
-	sprite_index=-1;
-	wait_extra-=1;
-}
-
-if(wait_extra<=0){
 	done=true;
 }
 

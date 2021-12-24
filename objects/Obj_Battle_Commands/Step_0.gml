@@ -26,10 +26,15 @@ if(keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord("D"))){
 		instance_destroy(self);
 	}
 	if(commandActive==1){
-		instance_create_depth(0,0,0,Obj_Battle_ActorSelect_Skill);
-		SoundOk();
-		commandMarkerLength=0;
-		instance_destroy(self);
+		if(global.skillUsed==false){
+			instance_create_depth(0,0,0,Obj_Battle_ActorSelect_Skill);
+			SoundOk();
+			commandMarkerLength=0;
+			instance_destroy(self);
+		}
+		else{
+			SoundBuzzer();
+		}
 	}
 }
 

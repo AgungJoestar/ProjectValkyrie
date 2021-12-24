@@ -3,7 +3,7 @@
 target = global.skillTarget;
 if(target._stunned = false){
 	target._stunned = true;
-	x = target.x-30;
+	x = target.x-target.sprite_width;
 	y = target.y;
 	turns = 2;
 	current_turn = global.BattleTurns;

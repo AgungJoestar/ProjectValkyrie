@@ -19,9 +19,9 @@ function SpHeal(amount){
 }
 
 function ApHeal(actor, amount){
-	act_obj[0] = (global.bActorID[0]);
-	act_obj[1] = (global.bActorID[1]);
-	act_obj[2] = (global.bActorID[2]);
+	for(var i=0;i<maxParty();i++){
+		act_obj[i] = (global.bActorID[i]);
+	}
 	
 	global.apheal = amount;
 	act_obj[actor]._ap += amount;

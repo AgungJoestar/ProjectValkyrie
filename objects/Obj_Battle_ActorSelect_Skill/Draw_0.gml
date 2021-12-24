@@ -17,7 +17,11 @@ draw_rectangle_color(rect_x1,rect_y1,rect_x2,rect_y2,c_white,c_white,c_white,c_w
 var rect_x1 = rect_x2;
 var rect_y1 = room_height-commandPosStart-20;
 var rect_x2 = rect_x1+3;
-var rect_y2 = rect_y1+command_h[0]+command_h[1]+command_h[2]+10;
+var rect_h = 0;
+for(var i = 0; i<array_length(command);i++){
+	rect_h+=command_h[0];
+}
+var rect_y2 = rect_y1+rect_h+10;
 draw_rectangle_color(rect_x1,rect_y1,rect_x2,rect_y2,c_white,c_white,c_white,c_white,0);
 
 draw_set_font(setFont);

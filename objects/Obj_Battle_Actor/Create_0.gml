@@ -10,10 +10,11 @@ sprite_index = global.actor_Spr[actor_id];
 x = xx[bActor];
 y = yy[bActor];
 
+_bFace = global.actor_bFace[actor_id];
 _sprite = sprite_index;
 _spriteATK = global.actor_SprATK[actor_id];
 _spriteDMG = global.actor_SprDMG[actor_id];
-_maxap = global.actor_maxAP[actor_id];
+_aprefresh = global.actor_APRefresh[actor_id];
 _name = global.actor_name[actor_id];
 _hp = global.actor_HP[actor_id];
 _sp = global.actor_SP[actor_id];

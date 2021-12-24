@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-obj[0] = (global.bActorID[0]);
-obj[1] = (global.bActorID[1]);
-obj[2] = (global.bActorID[2]);
+for(var i=0;i<maxParty();i++){
+	obj[i] = (global.bActorID[i]);
+}
 
 en_def = Obj_Battle_Enemy._def;
 attacker_id = global.AttackerId;

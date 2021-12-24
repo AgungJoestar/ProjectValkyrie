@@ -15,7 +15,7 @@ skill_mg = global.eskill_minigame[en_skill];
 
 
 skill_rect_x1 = 0;
-skill_rect_y1 = 20;
+skill_rect_y1 = room_height-220;
 skill_rect_x2 = room_width;
 skill_rect_y2 = skill_rect_y1+20;
 

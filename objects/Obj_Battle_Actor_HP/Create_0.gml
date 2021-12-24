@@ -1,15 +1,18 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-obj[0] = (global.bActorID[0]);
-obj[1] = (global.bActorID[1]);
-obj[2] = (global.bActorID[2]);
+total_hp = 0;
+total_sp = 0;
 
-total_hp = obj[0]._hp+obj[1]._hp+obj[2]._hp;
+for(var i=0;i<maxParty();i++){
+	obj[i] = (global.bActorID[i]);
+	total_hp += obj[i]._hp;
+	total_sp += obj[i]._sp;
+}
+
 hp = total_hp;
 hp_bar = (hp/total_hp)*100;
 
 max_sp = 100;
-total_sp = obj[0]._sp+obj[1]._sp+obj[2]._sp;
 sp = total_sp;
 sp_bar = (sp/max_sp)*100;

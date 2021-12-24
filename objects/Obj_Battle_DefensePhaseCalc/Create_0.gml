@@ -7,14 +7,12 @@ base_dmg = global.eskill_dmg[en_skill];
 atk_mul = global.eskill_atkmul[en_skill];
 def_mul = global.eskill_defmul[en_skill];
 
-act[0] = (global.bActorID[0]);
-act[1] = (global.bActorID[1]);
-act[2] = (global.bActorID[2]);
-act_def[0] = (global.bActorID[0])._def;
-act_def[1] = (global.bActorID[1])._def;
-act_def[2] = (global.bActorID[2])._def;
-
-act_def_total = act_def[0]+act_def[1]+act_def[2];
+act_def_total = 0;
+for(var i=0;i<maxParty();i++){
+	act[i] = (global.bActorID[i]);
+	act_def[i] = (global.bActorID[i])._def;
+	act_def_total+=act_def[i];
+}
 
 randomizer = irandom_range(10,15);
 global.damage = base_dmg+((en_atk*atk_mul)-(act_def_total*def_mul))+randomizer;

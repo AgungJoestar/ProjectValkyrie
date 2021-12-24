@@ -3,11 +3,11 @@
 //act_obj[0] = Obj_Battle_Actor_1_Chibi;
 //act_obj[1] = Obj_Battle_Actor_2_Chibi;
 //act_obj[2] = Obj_Battle_Actor_3_Chibi;
-act_obj[0] = (global.bActorID[0]);
-act_obj[1] = (global.bActorID[1]);
-act_obj[2] = (global.bActorID[2]);
+for(var i=0;i<maxParty();i++){
+	act_obj[i] = (global.bActorID[i]);
+}
 
-for(var i=0;i<array_length(global.partyMember);i++){
+for(var i=0;i<maxParty();i++){
 	act[i] = global.partyMember[i];
 	actorAP[i] = act_obj[i]._ap;
 	actSpr[i] = act_obj[i]._sprite;
