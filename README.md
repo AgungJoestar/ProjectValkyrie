@@ -1,6 +1,6 @@
 # ProjectValkyrie
 
-## What the fuck is this?
+## What the is this?
 This is a project iseng made by Agung Afrizal to create a Turn Based RPG he's been dreaming for
 
 ## Is this playable for now?
